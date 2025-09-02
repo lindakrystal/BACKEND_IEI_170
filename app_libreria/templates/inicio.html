@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Biblioteca - Inicio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 30px;
+            gap: 20px;
+        }
+        .card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            width: 200px;
+            height: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        }
+        .card a {
+            text-decoration: none;
+            color: #2c3e50;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 20px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>{{ mensaje }}</h1>
+        <p>Haz clic en cualquier tarjeta para acceder a la administración de Django</p>
+    </header>
+
+    <div class="container">
+        <div class="card"><a href="/admin/app_libreria/libro/">Libros</a></div>
+        <div class="card"><a href="/admin/app_libreria/lector/">Lectores</a></div>
+        <div class="card"><a href="/admin/app_libreria/biblioteca/">Bibliotecas</a></div>
+        <div class="card"><a href="/admin/app_libreria/autor/">Autores</a></div>
+        <div class="card"><a href="/admin/app_libreria/nacionalidad/">Nacionalidades</a></div>
+        <div class="card"><a href="/admin/app_libreria/comuna/">Comunas</a></div>
+        <div class="card"><a href="/admin/app_libreria/direccion/">Direcciones</a></div>
+        <div class="card"><a href="/admin/app_libreria/prestamo/">Préstamos</a></div>
+    </div>
+
+    <footer>
+        <p>Biblioteca - Administración de modelos con Django</p>
+    </footer>
+</body>
+</html>
